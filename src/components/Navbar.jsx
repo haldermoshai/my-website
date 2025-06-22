@@ -144,14 +144,15 @@ const Navbar = () => {
 
   return (
     <div className={`shadow-md fixed top-0 left-0 right-0 z-50 w-full bg-white transition-transform duration-300 ${isNavbarVisible ? 'translate-y-0' : '-translate-y-full'}`}>
-      <div className="mx-auto container flex w-full items-center justify-between px-8 py-4 xl:px-0">
+      <div className="mx-auto container flex w-full items-center justify-between pl-4 pr-6 py-4 xl:px-0">
         <Link to="/" className="inline-flex items-center space-x-2 cursor-pointer">
-          <span>
+          <span className="flex items-center">
             <img
-              src="/logo/sign.png"
+              src="/logo/logo.png"
               alt="site logo"
-              className="w-30 h-10"
+              className="w-20 h-10"
             />
+            <span className="text-base font-myfont font-bold text-red-900">Sourav Halder</span>
           </span>
         </Link>
         <div className="hidden lg:block">
@@ -185,13 +186,15 @@ const Navbar = () => {
               <div className="px-5 pb-6 pt-5">
                 <div className="flex items-center justify-between">
                   <div className="inline-flex items-center space-x-2 pl-2">
-                    <span>
-                      <img
-                        src="/logo/Me.jpg"
-                        alt="site logo"
-                        className="rounded-full w-10 h-10 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10"
-                      />
-                    </span>
+                    <Link to="/" onClick={toggleMenu}>
+                      <span>
+                        <img
+                          src="/logo/Me.jpg"
+                          alt="site logo"
+                          className="rounded-full w-10 h-10 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10"
+                        />
+                      </span>
+                    </Link>
                   </div>
                   <div className="-mr-2">
                     <button
